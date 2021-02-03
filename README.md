@@ -1,2 +1,3 @@
 # uin-oblig-elin
-Oblig oppgaver uin V21
+Oblig1 UIN 
+Oppgave 1 og 2 HTML, CSS
