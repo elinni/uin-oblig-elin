@@ -1,2 +1,2 @@
-## Oblig 2 i UIN-V21
+## Oblig 2 Moderne JS
 
