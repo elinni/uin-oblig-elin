@@ -9,7 +9,7 @@ try {
 
   (function Demo() {
     // Use let (or const) instead of var to make the function succeed.
-    const myDemo = "This is a dem";
+    const myDemo = "This is a demo";
 
     // Don't make changes below this line
 
@@ -42,7 +42,7 @@ try {
 		const addOne = x => x + 1;
 		
 		// Rewrite the line below to use template literals.
-		const greeting = 'Hello ${who}! ${addOne(2)} times.';
+		const greeting = `Hello ${who}! ${addOne(2)} times.`;
 
 		// Don't make changes below this line	
 		
@@ -58,7 +58,7 @@ try {
 	(function UseDefaultParameters() {
     
 		// Correct the syntax errors in the function.
-		function hello(who = "World") {
+		function hello(who = 'World') {
 			return 'Hello ' + who + '!';
 		}
 
@@ -73,12 +73,12 @@ try {
 
   /// Rest parameter ///
 
-  /*
+  
 	(function UseRestParameter() {
 		// Add just one rest parameter and use the number of elements in this parameter 
 		// (What is the name of that property?) in the return statement to let the test pass.
-		function foo(a, b) {
-			return a + b;
+		function foo(a, b,...c) {
+			return a + b + c.length;
 		}
 
 		// Don't make changes below this line	
@@ -88,7 +88,7 @@ try {
 		
 		solved++;
 	})();
-	*/
+	
 
   /// Spread operator ///
 
@@ -130,11 +130,11 @@ try {
 
   /// Arrow functions ///
 
-  /*
+  
 	(function UseArrow1() {
 		// Rewrite double as arrow function and make the test pass.
-		let double = function (x) {
-			return x;
+		let double = (x) => {
+			return x*2 ;
 		};
 
 		// Don't make changes below this line	
@@ -144,12 +144,12 @@ try {
 		
 		solved++;
 	})();
-	*/
+	
 
-  /*
+  
 	(function UseArrow2() {
 		// Correct the errors in the arrow function.
-		let add = x, y => return x * y;
+		let add = (x, y) => {return x + y};
 
 		// Don't make changes below this line	
 		
@@ -158,7 +158,7 @@ try {
 		
 		solved++;
 	})();
-	*/
+	
 
   /// Destructuring ///
 
@@ -168,7 +168,7 @@ try {
 		
 		// Use array destructuring to change the 3 statements below into 1 statement.
 		// Tip: Spread operator might be needed too.
-		let [a, b, c] = [arr[0], arr[2], arr.slice(3)];
+		let [a, ,b,...c] = arr;
 
 		// Don't make changes below this line	
 		
@@ -242,7 +242,7 @@ try {
   (function UseParameterDestructuring2() {
     // Adjust the code to let the test succeed.
 
-    const a = {name: 'Oslo' , age: 985};
+    const a = {name:'Oslo' , age: 985};
 
     // Don't make changes below this line
 
@@ -259,18 +259,14 @@ try {
 
   /// Property shorthand ///
 
-  /*
+  
 	(function UsePropertyShorthand() {
 		const name = 'Oslo';
 		const age = 985;
 		const norwegian = true;
 		
 		// Remove all unnecesary syntax to let the test pass.
-		let city = {
-			name: name,
-			age: age,
-			dutch: !norwegian
-		};
+		let city = {name, age, dutch: false};
 
 		// Don't make changes below this line	
 		
@@ -278,16 +274,16 @@ try {
 		
 		solved++;
 	})();
-	*/
+	
 
   /// Object Spread Properties (ES2018) ///
 
-  /*
+  
 	(function UseObjectSpreadProperties1() {
 		let obj = { val: 1 };
 		
 		// Use Object Spread Properties to let the tests succeed.
-		let copy = obj;
+		let copy = {...obj};
 
 		// Don't make changes below this line	
 		
@@ -298,9 +294,8 @@ try {
 
 		solved++;
 	})();
-	*/
+	
 
-  /*
 	(function UseObjectSpreadProperties2() {
 		let obj1 = { a: 100, b: 2, c: 300 };
 		let obj2 = { b: 0, d: 100, e: 200};
@@ -310,7 +305,7 @@ try {
 		// - Do NOT use Object.assign()
 		// - Do use object spread properties
 		// - Think about the order!
-		let result = { obj1, obj2, obj3 };
+		let result = { ...obj1, ...obj3, ...obj2 };
 
 		// Don't make changes below this line	
 		
@@ -322,7 +317,7 @@ try {
 
 		solved++;
 	})();
-	*/
+	
 
   ////// BONUS //////
 
